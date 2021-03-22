@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="https://codepen.io/gymratpacks/pen/VKzBEp#0">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+    </head>
+    <body>
+      <div class="row">
+    <div class="col-md-12">
+      <form action="{{url_for('home')}}" method="post">
+        <h1> Iris flower species detection</h1>
+        
+        <fieldset>
+          
+          <legend><span class="number">1</span> Enter following information</legend>
+        
+          <label for="name">Sepal Length:</label>
+          <input type="text" id="name" name="a">
+        
+          <label for="email">Sepal Width:</label>
+          <input type="text" id="mail" name="b">
+       
+          <label for="password">Petal length:</label>
+          <input type="text" id="password" name="c">
+        
+          <label for="password">Petal Width:</label>
+          <input type="text" id="password" name="d">
+        </fieldset>
+        
+       
+        <button type="submit" value=predict>Predict</button>
+        
+       </form>
+        </div>
+      </div>
+      
+    </body>
+</html>

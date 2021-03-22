@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='resultStyle.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="product-img">
+            {%if data==0%}
+            <img src="static\setosa.jpg" height="420" width="327">
+
+            {%elif data==1%}
+            <img src="static\versicolor.jpg" height="420" width="327">
+
+            {%else%}
+            <img src="static\virginica.png" height="420" width="327">
+            {%endif%}
+        </div>
+
+        <div class="product-info">
+          <div class="product-text">
+              {%if data==0%}
+              <h1>It's Setosa 😉</h1>
+              <h2>details</h2>
+              <p>Iris setosa, the bristle-pointed iris, is a species of flowering plant in the genus
+                  Iris of the family Iridaceae, it belongs the subgenus Limniris and the series Tripetalae.
+                  It is a rhizomatous perennial from a wide range across the Arctic sea, including Alaska, Maine, Canada (including British Columbia, Newfoundland, Quebec and Yukon),
+                  Russia (including Siberia), northeastern Asia, China, Korea and southwards to Japan.
+                  The plant has tall branching stems, mid green leaves and violet, purple-blue, violet-blue, blue, to lavender
+                  flowers. There are also plants with pink and white flowers.
+              </p>
+
+              {%elif data == 1%}
+              <h1>It's Versicolor 😉</h1>
+              <h2>details</h2>
+              <p>Iris versicolor is also commonly known as the blue flag, harlequin blueflag, larger blue flag, northern blue flag, and poison flag, plus other variations of these names, and in Britain and Ireland as purple iris.
+                  It is a species of Iris native to North America, in the Eastern United States and Eastern Canada. It is common in sedge meadows, marshes, and along streambanks and shores. The specific epithet versicolor means "variously coloured".
+                  It is one of the three Iris species in the Iris flower data set outlined by Ronald Fisher in his 1936 paper "The use of multiple measurements in taxonomic problems" as an example of linear discriminant analysis.
+              </p>
+              {%else%}  
+              <h1>It's virginica 😉</h1>
+              <h2>details</h2>
+              <p>
+                Iris virginica, with the common name Virginia iris, is a perennial species of flowering plant, native to eastern North America.
+                It is common along the coastal plain from Florida to Georgia in the Southeastern United States.
+                It is one of the three Iris species in the Iris flower data set outlined by Ronald Fisher in his 1936 paper "The use of multiple measurements in taxonomic problems" as an example of linear discriminant analysis.
+              </p>
+              {%endif%}
+          </div>
+            <div class="product-price-btn">
+                <a href="/">Back to Home</a>
+            </div>
+        </div>
+      </div>
+</body>
+</html>
